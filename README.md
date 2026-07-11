@@ -126,11 +126,8 @@ pip install -r requirements.txt
 ollama pull qwen2.5:3b-instruct
 ```
 
-### 4. Add the Tesla owner's manuals
 
-Due to copyright, the official Tesla PDF manuals are **not included** in this repository. Download the manuals you want to use from [Tesla's official website](https://www.tesla.com/support) and place them in `data/raw/`, for example:
-
-### 5. Build the vector database
+### 4. Build the vector database
 
 ```bash
 python src/rag/build_vector_db.py
@@ -138,7 +135,7 @@ python src/rag/build_vector_db.py
 
 This will parse the PDFs, chunk them intelligently by heading structure, generate embeddings, and persist everything to `data/processed/`.
 
-### 6. Launch the app
+### 5. Launch the app
 
 ```bash
 streamlit run app.py
@@ -151,9 +148,10 @@ Open the local URL Streamlit provides (typically `http://localhost:8501`) and st
 ## 💬 Example Questions
 
 - "What is the maximum tongue weight for a Model Y trailer?"
-- "How do I enable Sentry Mode on Model Y?"
-- "What should I do if alert CP_a054 appears?"
-- "Compare the maximum towing capacity of Model X and Model Y."
+- "At what speeds does the Forward Collision Warning operate on a Model X"
+- "What is the minimum storage capacity required for a USB drive to record videos in a Model 3?"
+- "How much pressure do Model S tires lose in cold ambient temperatures?"
+- "What is the maximum vertical load capacity when carrying accessories on a Cybertruck tow hitch?"
 
 If a question can't be answered from the manuals, TeslaBot will honestly say so instead of guessing.
 
@@ -166,7 +164,3 @@ If a question can't be answered from the manuals, TeslaBot will honestly say so 
 - **No data collection.** Your questions and the manual contents never leave your device.
 
 ---
-
-## 📄 License
-
-This project's source code is provided as-is for personal and educational use. Tesla owner's manuals remain the property of Tesla, Inc. and are not distributed with this repository.
