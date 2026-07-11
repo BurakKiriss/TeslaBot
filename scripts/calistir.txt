@@ -1,4 +1,0 @@
-python src\rag\reranker.py
-python src\rag\retriever.py
-python src\rag\build_vector_db.py
-streamlit run app.py
