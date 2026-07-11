@@ -22,7 +22,7 @@ TeslaBot lets you ask natural-language questions about your Tesla vehicle and ge
 ---
 
 ## 🏗️ Architecture
-
+```text
 User Query
 │
 ▼
@@ -57,7 +57,7 @@ User Query
 │
 ▼
 Answer + Source Citations
-
+```
 ---
 
 ## 🧠 Tech Stack
