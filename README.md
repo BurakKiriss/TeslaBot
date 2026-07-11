@@ -82,17 +82,17 @@ All models are open-source and run locally — no OpenAI, Anthropic, or any paid
 ```text
 TeslaBot/
 ├── data/
-│   ├── raw/                # Source PDFs (not included — see Setup)
-│   └── processed/          # Generated vector DB and chunk cache
+│   ├── raw/                    # Source PDFs 
+│   └── processed/               # Generated vector DB, chunks, and cache files
 ├── src/
 │   ├── rag/
-│   │   ├── build_vector_db.py  # PDF → chunks → embeddings → Chroma
-│   │   ├── retriever.py        # Hybrid retrieval + HyDE + model detection
-│   │   └── reranker.py         # Cross-encoder re-ranking
+│   │   ├── build_vector_db.py   # Parses PDFs, chunks text, builds the Chroma vector DB
+│   │   ├── retriever.py         # Hybrid (Chroma + BM25) retrieval, HyDE, model detection
+│   │   └── reranker.py          # Cross-encoder re-ranking of retrieved chunks
 │   └── generation/
-│       └── generator.py        # Grounded answer generation + confidence gate
-├── app.py                  # Streamlit application entry point
-└── requirements.txt
+│       └── generator.py         # Confidence gating and grounded answer generation
+├── app.py                       # Streamlit application entry point
+└── requirements.txt             # Python dependencies
 ```
 
 ---
