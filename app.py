@@ -13,7 +13,7 @@ def load_database():
 
 
 st.set_page_config(page_title="Tesla RAG Arama", page_icon="🚗", layout="centered")
-st.title("🚗 Tesla Model Y - Akıllı Kılavuz Arama")
+st.title("🚗 Tesla- Akıllı Kılavuz Arama")
 st.markdown("Bu sistem, sorunuza en uygun kılavuz bölümlerini getirmek için **HyDE**, **Chroma+BM25 Karma Arama** ve **Cross-Encoder Re-ranking** kullanır.")
 
 
