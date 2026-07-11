@@ -79,10 +79,11 @@ All models are open-source and run locally — no OpenAI, Anthropic, or any paid
 
 ## 📁 Project Structure
 
+```text
 TeslaBot/
 ├── data/
-│   ├── raw/                  # Source PDFs (not included — see Setup)
-│   └── processed/            # Generated vector DB and chunk cache
+│   ├── raw/                # Source PDFs (not included — see Setup)
+│   └── processed/          # Generated vector DB and chunk cache
 ├── src/
 │   ├── rag/
 │   │   ├── build_vector_db.py  # PDF → chunks → embeddings → Chroma
@@ -90,8 +91,9 @@ TeslaBot/
 │   │   └── reranker.py         # Cross-encoder re-ranking
 │   └── generation/
 │       └── generator.py        # Grounded answer generation + confidence gate
-├── app.py                    # Streamlit application entry point
+├── app.py                  # Streamlit application entry point
 └── requirements.txt
+```
 
 ---
 
